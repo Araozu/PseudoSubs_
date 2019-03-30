@@ -1,0 +1,9 @@
+[*]
+indent_style = space
+indent_size = 4
+
+[*.vue]
+indent_size = 2
+
+[*.coffee]
+indent_size = 2

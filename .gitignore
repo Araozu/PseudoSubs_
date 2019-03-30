@@ -19,3 +19,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# Archivos de desarrollo del servidor
+/srv/*/**.js
+/srv/*/**.js.map
