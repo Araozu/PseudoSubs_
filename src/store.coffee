@@ -19,6 +19,7 @@ export default new Vuex.Store
 
     modoColor: localStorage?.getItem "modoColor" ? "claro"
 
+    txtAdicionalAnime: "Comprimido sin perder 1 solo pixel."
 
   mutations:
     cambiarBarraLateral: (state) ->
@@ -31,5 +32,8 @@ export default new Vuex.Store
 
     cambiarModoColor: (state, color) ->
       state.modoColor = color
+
+    cambiarTxtAdicionalAnime: (state, txt) ->
+      state.txtAdicionalAnime = txt
 
   actions: {}

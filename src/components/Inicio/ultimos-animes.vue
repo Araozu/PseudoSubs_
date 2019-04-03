@@ -4,9 +4,11 @@
       div.fondo_1(:style="'background-color: ' + anime.color")
       div.fondo_texto(:class="'fondo_texto--' + $store.state.modoColor")
       div.cont
-        div.titulo {{ anime.titulo }}
+        router-link(:to="anime.link")
+          div.titulo {{ anime.titulo }}
 
-        img.imagen.tarjeta(:src="anime.imgUrl")
+        router-link(:to="anime.link")
+          img.imagen.tarjeta(:src="anime.imgUrl")
         div.animeCont
           div.descr {{ anime.descripcion }}
           br
@@ -148,6 +150,8 @@
   .cont
     padding: 10px 40px
     z-index: 4
+    a
+      text-decoration: none
 
   .imagen
     @extend %bordeRedondo-std

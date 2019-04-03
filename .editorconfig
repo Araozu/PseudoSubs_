@@ -7,3 +7,6 @@ indent_size = 2
 
 [*.coffee]
 indent_size = 2
+
+[*.sass]
+indent_size = 2

@@ -39,7 +39,7 @@
             :src="modoSiguiente === 'oscuro'? '/img/github.svg': '/img/githubOsc.svg' ")
         br.mostrarEnTablet
 
-        router-link(to="/")
+        router-link(to="/cuenta")
           span.ocultarEnTablet Ajustes
           i.material-icons.texto2.mostrarEnTablet settings
 
@@ -96,7 +96,6 @@
             ""
         this.elemHtmlModoOscuro.innerHTML = resultado
 
-      # // Todo: Almacenar el estado de la barra lateral en localStorage
       ocultarBarraLateral: ->
         estadoActual = @$store.state.barraLateralOculta
         console.log "Anuma v: #{estadoActual}"

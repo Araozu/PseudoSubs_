@@ -1,6 +1,8 @@
 <template lang="pug">
   div.inicio
     ultimos-eps
+    animes-novelas
+    br
     caracteristicas
     y-notaras-la-diferencia
     //
@@ -11,6 +13,7 @@
   import ultimosEps from "../components/Inicio/ultimos-animes.vue"
   import caracteristicas from "../components/Inicio/caracteristicas.vue"
   import yNotarasLaDiferencia from "../components/Inicio/y-notaras-la-diferencia.vue"
+  import animesNovelas from "../components/Inicio/animes-novelas.vue"
 
   export default
     name: "Inicio"
@@ -18,7 +21,8 @@
       caracteristicas: caracteristicas
       'y-notaras-la-diferencia': yNotarasLaDiferencia
       'ultimos-eps': ultimosEps
-
+      'animes-novelas': animesNovelas
+    #
 
 </script>
 
