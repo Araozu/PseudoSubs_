@@ -51,7 +51,7 @@
       errorAnimesNoEncontrados: ->
         if @$store.state.animes[0]?
           if @primeraCarga
-            if DEV then console.log "Los animes existen, y voy a ciclarlos v:<"
+
             @anime = @obtenerSigAnime()
             @establecerIntervalo()
             @primeraCarga = false

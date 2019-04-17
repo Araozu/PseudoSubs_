@@ -5,8 +5,8 @@
     div.otro(:style="'min-height: ' + altoPantalla + 'px' ")
       div.col
         div.fil
-          div.titulo Cámbiate a PseudoSubs
-          div.motto Y notarás la diferencia
+          div.titulo <!--Cámbiate a PseudoSubs--> RIP PseudoSubs - 2017-2019
+          div.motto Y notarás la diferencia <small>¿O no?</small>
           br
           br
           br
