@@ -5,8 +5,7 @@
         br
         caracteristicas
         y-notaras-la-diferencia
-        //
-
+    //
 </template>
 
 <script lang="coffee">

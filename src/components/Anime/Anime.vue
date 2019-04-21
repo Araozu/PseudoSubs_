@@ -3,8 +3,6 @@
         div(v-if="estadoAnime === 0") Cargando...
         div(v-if="estadoAnime === -1") Error. Anime no encontrado
         div(v-if="estadoAnime === 1")
-            // div.titulo {{ anime.titulo }} -> {{ anime.anime_ID }}
-            // p {{ anime }}
             br
             br
             div.datos
@@ -24,6 +22,9 @@
                         div.tarjeta.fondo1.op-ed ops y eds aqui. En construcción.
                     br
                     panel-de-descarga(:animeid="anime.anime_ID" :color="anime.color")
+                    div.tarjeta.background__disqus
+                        vue-disqus(shortname="www-pseudosubs-com" :identifier="nombreCortoAnime"
+                            :url="'https://pseudosubs.com/Anime/' + nombreCortoAnime")
             br
             //
 </template>
@@ -39,6 +40,9 @@
             anime: {}
             # -1 no encontrado, 0 cargando y 1 encontrado
             estadoAnime: 0
+        computed:
+            nombreCortoAnime: ->
+                @anime.link?.substr(7)
         created: ->
             _ = this
             animes = @$store.state.animes
@@ -69,6 +73,10 @@
 
 <style scoped lang="sass">
     @import "../../assets/sass/variables"
+
+    .background__disqus
+        background-color: #101010
+        padding: 15px
 
     .contenedor
         margin: 0 50px
