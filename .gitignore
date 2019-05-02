@@ -1,6 +1,7 @@
 .DS_Store
 node_modules
 /dist
+/esquemaAnimes
 
 # local env files
 .env.local
@@ -21,7 +22,7 @@ yarn-error.log*
 *.sw*
 
 # Archivos de desarrollo del servidor
-./srv/*/**.js
-./srv/*/**.js.map
+srv/*/**.js
+srv/*/**.js.map
 deployarBackend.js
 deployFrontEnd.js
