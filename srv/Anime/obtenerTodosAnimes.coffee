@@ -1,18 +1,17 @@
-import { con } from "../index"
+import {con} from "../index"
 import YAML from "yaml"
 
 export default (req, res) ->
-
-  query = "SELECT * FROM animes ORDER BY anime_ID DESC "
-  con.query query, (err, respuesta) ->
-    res.send do ->
-      unless err
-        YAML.stringify
-          exito: true
-          payload: respuesta
-          error: {}
-      else
-        """
+    query = "SELECT * FROM animes ORDER BY anime_ID DESC "
+    con.query query, (err, respuesta) ->
+        res.send do ->
+            unless err
+                YAML.stringify
+                    exito: true
+                    payload: respuesta
+                    error: {}
+            else
+                """
         exito: false
         payload: {}
         error:

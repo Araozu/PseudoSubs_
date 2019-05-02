@@ -19,6 +19,8 @@
 </script>
 
 <style scoped lang="sass">
+    @import "../../assets/sass/variables"
+
     .main
         margin: 50px 0
 
@@ -38,6 +40,13 @@
             font:
                 family: Muli, "Open Sans", sans-serif
                 size: x-large
+
+    @media only screen and (max-width: $movil)
+        .titulo
+            font-size: 2rem !important
+
+        .titulo__descr
+            font-size: large !important
 
     //
 </style>

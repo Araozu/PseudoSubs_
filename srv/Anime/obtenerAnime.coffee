@@ -1,22 +1,21 @@
-import { con } from "../index"
+import {con} from "../index"
 import YAML from "yaml"
 
 export default (req, res) ->
+    if req.params.id?
+        idAnime = req.params.id
 
-  if req.params.id?
-    idAnime = req.params.id
+        query = "SELECT * FROM animes WHERE anime_ID=?"
 
-    query = "SELECT * FROM animes WHERE anime_ID=?"
-
-    con.query query, [idAnime], (err, respuesta) ->
-      res.send do ->
-        unless err
-          YAML.stringify
-            exito: true
-            payload: respuesta[0]
-            error: {}
-        else
-          """
+        con.query query, [idAnime], (err, respuesta) ->
+            res.send do ->
+                unless err
+                    YAML.stringify
+                        exito: true
+                        payload: respuesta[0]
+                        error: {}
+                else
+                    """
           exito: false
           payload: {}
           error:
@@ -25,8 +24,8 @@ export default (req, res) ->
             adicional: "Query: #{query}\nError:#{err}"
           """
 
-  else
-    res.send """
+    else
+        res.send """
       exito: false
       payload: {}
       error:

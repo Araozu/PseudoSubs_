@@ -8,30 +8,34 @@ DEV = process.env.NODE_ENV == "development"
 
 export default new Vuex.Store
     state:
-        barraLateralOculta:
-            (localStorage?.getItem "barraLateralOculta") == "true" ? true
+        servidor: unless DEV then "" else ""
 
         animes:
             if localStorage?
                 YAML.parse ((localStorage.getItem "animes") ? "[]")
-            else
-                []
+            else []
 
-        modoColor: localStorage?.getItem "modoColor" ? "claro"
+        modoColor: (localStorage?.getItem "modoColor") ? "claro"
         tituloAnime: "Anime"
         txtAdicionalAnime: "Comprimido sin perder 1 solo pixel."
         mostrarImgAnime: false
-        imgTituloAnime: "19_2_fruits_basket"
+        imgTituloAnime: ""
         rutaActual: [{nombre: "PseudoSubs", ruta: "/"}]
+        usuarioActual:
+            if localStorage?
+                YAML.parse ((localStorage.getItem "usuario") ? "{}" )
+            else {}
 
     mutations:
-        cambiarBarraLateral: (state) ->
-            state.barraLateralOculta = !state.barraLateralOculta
-            localStorage?.setItem "barraLateralOculta", state.barraLateralOculta
-
         establecerAnime: (state, animes) ->
-            localStorage?.setItem "animes", YAML.stringify animes
-            state.animes = animes
+            animesTxt = YAML.stringify animes
+            animesLocal = localStorage?.getItem "animes"
+            unless animesTxt is animesLocal
+                localStorage?.setItem "animes", animesTxt
+                state.animes = animes
+                if DEV then console.log "Actualicé los animes"
+            else
+                if DEV then console.log "Ahorré tener que actualizar todo v:"
 
         cambiarModoColor: (state, color) ->
             state.modoColor = color
@@ -50,5 +54,9 @@ export default new Vuex.Store
 
         cambiarRutaActual: (state, valor) ->
             state.rutaActual = valor
+
+        cambiarUsuarioActual: (state, valor) ->
+            state.usuarioActual = valor
+            if localStorage? then localStorage.setItem "usuario", YAML.stringify valor
 
     actions: {}

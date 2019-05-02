@@ -2,7 +2,7 @@
     div#app
         div.fondo.fondo2
         barra-lateral
-        div.contenido(:class="$store.state.barraLateralOculta? 'contenido--barraOculta' : ''", :barra-oculta="$store.state.barraLateralOculta.toString()")
+        div.contenido.contenido--barraOculta
             router-view
 
 </template>
@@ -22,24 +22,21 @@
         components:
             'barra-lateral': barraLateral
         created: ->
-            if @$store.state.animes[0]?
-            #
-            else
-                store = @$store
-                fetch("https://pseudosubs.com/anime", {
-                    method: "POST"
-                    headers:
-                        "Content-Type": "application/x-www-form-urlencoded"
-                })
-                    .then((x) -> x.text())
-                    .then (res) ->
-                        # if DEV then console.log res
-                        resultado = YAML.parse res
+            store = @$store
+            fetch("#{this.$store.state.servidor}/anime", {
+                method: "POST"
+                headers:
+                    "Content-Type": "application/x-www-form-urlencoded"
+            })
+                .then (x) -> x.text()
+                .then (res) ->
+                    # if DEV then console.log res
+                    resultado = YAML.parse res
 
-                        if resultado.exito
-                            store.commit "establecerAnime", resultado.payload
-                        else
-                            console.log "Error al obtener los animes.\n#{res}"
+                    if resultado.exito
+                        store.commit "establecerAnime", resultado.payload
+                    else
+                        console.log "Error al obtener los animes.\n#{res}"
 #
 
 </script>

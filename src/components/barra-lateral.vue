@@ -2,8 +2,8 @@
  Barra Lateral. Responsivo hasta los 285px de ancho. -->
 <template lang="pug">
     div.barra
-        div.lateral.fondo2.ocultarEnMovil(:class="$store.state.barraLateralOculta? 'barraOculta': ''")
-            div.botonOcultar(@click="ocultarBarraLateral()" :style="'display: ' + (largoVentana < 1201? 'none': 'block')").
+        div.lateral.fondo2.ocultarEnMovil.barraOculta
+            // div.botonOcultar(@click="ocultarBarraLateral()" :style="'display: ' + (largoVentana < 1201? 'none': 'block')").
                 {{ $store.state.barraLateralOculta? '>>': '<<' }}
 
             router-link.linkImg(to="/" title="Ir al inicio")
@@ -11,7 +11,6 @@
 
             div.items.tarjeta.fondo1.texto2
                 div.cambiarModo(@click="cambiarModoColor()")
-                    span.ocultarEnTablet Cambiar a modo {{ modoSiguiente }}
                     i.material-icons.texto2.mostrarEnTablet.
                         {{ modoSiguiente === 'oscuro'? 'brightness_3': 'brightness_5' }}
                 br
@@ -19,28 +18,19 @@
                 br
 
                 router-link(to="/")
-                    span.ocultarEnTablet Nosotros
-                    i.material-icons.texto2.mostrarEnTablet group
+                    i.material-icons.texto2.mostrarEnTablet(title="Nosotros") group
                 br.mostrarEnTablet
 
                 router-link(to="/")
-                    span.ocultarEnTablet Cambios
-                    i.material-icons.texto2.mostrarEnTablet new_releases
-                br.mostrarEnTablet
-
-                router-link(to="/")
-                    span.ocultarEnTablet Diseño
-                    i.material-icons.texto2.mostrarEnTablet brush
+                    i.material-icons.texto2.mostrarEnTablet(title="Ayuda") help
                 br.mostrarEnTablet
 
                 a(href="https://github.com/Araozu/PseudoSubs_" target="_blank" title="GitHub")
-                    span.ocultarEnTablet GitHub
                     img.imgGitHub.texto2.mostrarEnTablet(
                         :src="modoSiguiente === 'oscuro'? '/img/github.svg': '/img/githubOsc.svg' ")
                 br.mostrarEnTablet
 
                 router-link(to="/cuenta")
-                    span.ocultarEnTablet Ajustes
                     i.material-icons.texto2.mostrarEnTablet settings
 
                 div.ocultarEnTablet
@@ -97,11 +87,6 @@
                         ""
                 this.elemHtmlModoOscuro.innerHTML = resultado
 
-            ocultarBarraLateral: ->
-                estadoActual = @$store.state.barraLateralOculta
-                console.log "Anuma v: #{estadoActual}"
-                @$store.commit "cambiarBarraLateral"
-
         created: ->
             unless this.elemHtmlModoOscuro
                 nuevoElem = document.createElement "style"
@@ -114,8 +99,8 @@
                 if Storage? and localStorage.getItem "modoColor"
                     localStorage.getItem "modoColor"
                 else if Storage?
-                    localStorage.setItem "modoColor", "oscuro"
-                    "oscuro"
+                    localStorage.setItem "modoColor", "claro"
+                    "claro"
                 else
                     console.log "No hay soporte para LocalStorage"
                     "claro"

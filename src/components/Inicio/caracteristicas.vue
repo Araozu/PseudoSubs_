@@ -69,9 +69,17 @@
         font:
             family: Muli, "Open Sans", sans-serif
             size: 2.5rem
-    //
 
     .descripcion
         padding: 50px 20px
+
+    @media only screen and (max-width: $movil)
+        .caracsCont
+            padding: 0
+
+        .titulo
+            font-size: 2rem
+
+    //
 
 </style>

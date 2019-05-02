@@ -19,9 +19,13 @@
                             div.temporada Temporada: {{ anime.temporada + " " + anime.anio }}
                             div.fuente Fuente: {{ anime.fuente }}
                             div.generos Generos: {{ anime.generos }}
-                        div.tarjeta.fondo1.op-ed ops y eds aqui. En construcción.
+                        op-ed(:anime_ID="anime.anime_ID" :color="anime.color")
                     br
-                    panel-de-descarga(:animeid="anime.anime_ID" :color="anime.color")
+                    div.tarjeta.aviso(:style="colorBackground") {{ aviso }}
+                    br
+                    panel-de-descarga(:animeid="anime.anime_ID" :color="anime.color"
+                        :cambiar-aviso="cambiarAviso")
+                    br
                     div.tarjeta.background__disqus
                         vue-disqus(shortname="www-pseudosubs-com" :identifier="nombreCortoAnime"
                             :url="'https://pseudosubs.com/Anime/' + nombreCortoAnime")
@@ -31,33 +35,41 @@
 
 <script lang="coffee">
     import panelDescarga from "./panel-descarga.vue"
+    import opEd from "./op-ed.vue"
+    import YAML from "yaml"
 
     export default
         name: "Anime"
         components:
-            'panel-de-descarga': panelDescarga
+            "panel-de-descarga": panelDescarga
+            "op-ed": opEd
         data: ->
             anime: {}
             # -1 no encontrado, 0 cargando y 1 encontrado
             estadoAnime: 0
+            aviso: ""
         computed:
             nombreCortoAnime: ->
                 @anime.link?.substr(7)
+            colorBackground: -> "background-color: #{@anime.color};"
+        methods:
+            cambiarAviso: (aviso) -> @aviso = aviso
         created: ->
-            _ = this
+            vm = this
             animes = @$store.state.animes
             resultado = -1
             for anime in animes
                 if anime.link is "/Anime/" + @$route.params.nombre
-                    _.anime = anime
+                    vm.anime = anime
                     resultado = 1
                     break
-            @estadoAnime = resultado
+            vm.estadoAnime = resultado
             if resultado is 1
                 @$store.commit "cambiarTituloAnime", "#{anime.titulo}"
                 @$store.commit "cambiarTxtAdicionalAnime", (if anime.comentario? then anime.comentario else "Sin comentarios.")
                 @$store.commit "cambiarEstadoImgAnime", true
                 @$store.commit "cambiarImgTituloAnime", @anime.titulo
+
             else
                 @$store.commit "cambiarTxtAdicionalAnime", "?"
 
@@ -66,6 +78,8 @@
                 {nombre: "A", ruta: "/Anime/"},
                 {nombre: "_", ruta: "#"}
             ]
+
+
 
     #
 
@@ -77,6 +91,13 @@
     .background__disqus
         background-color: #101010
         padding: 15px
+
+    .aviso
+        text-align: center
+        color: white
+        font:
+            family: "Product Sans", "Open Sans", sans-serif
+            size: x-large
 
     .contenedor
         margin: 0 50px

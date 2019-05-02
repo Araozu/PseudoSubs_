@@ -2,6 +2,7 @@
     div.inicio
         ultimos-eps
         animes-novelas
+        notificaciones
         br
         caracteristicas
         y-notaras-la-diferencia
@@ -13,6 +14,7 @@
     import caracteristicas from "../components/Inicio/caracteristicas.vue"
     import yNotarasLaDiferencia from "../components/Inicio/y-notaras-la-diferencia.vue"
     import animesNovelas from "../components/Inicio/animes-novelas.vue"
+    import notificaciones from "../components/Inicio/notificaciones.vue"
 
     export default
         name: "Inicio"
@@ -21,6 +23,7 @@
             'y-notaras-la-diferencia': yNotarasLaDiferencia
             'ultimos-eps': ultimosEps
             'animes-novelas': animesNovelas
+            notificaciones: notificaciones
         created: ->
             @$store.commit "cambiarRutaActual", [{nombre: "PseudoSubs", ruta: "/"}]
 #
