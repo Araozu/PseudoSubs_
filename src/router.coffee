@@ -34,7 +34,7 @@ export default new Router
             component: listaAnimes
         ]
     ,
-        path: "/cuenta"
+        path: "/ajustes"
         name: "Usuario"
         component: Usuario
     ,
