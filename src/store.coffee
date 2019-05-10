@@ -21,9 +21,15 @@ export default new Vuex.Store
         mostrarImgAnime: false
         imgTituloAnime: ""
         rutaActual: [{nombre: "PseudoSubs", ruta: "/"}]
-        usuarioActual:
+
+        navegador_hash:
             if localStorage?
-                YAML.parse ((localStorage.getItem "usuario") ? "{}" )
+                (localStorage.getItem "navegador_hash") ? ""
+            else ""
+
+        suscripciones:
+            if localStorage?
+                YAML.parse ((localStorage.getItem "suscripciones") ? "{}")
             else {}
 
     mutations:
@@ -55,8 +61,22 @@ export default new Vuex.Store
         cambiarRutaActual: (state, valor) ->
             state.rutaActual = valor
 
-        cambiarUsuarioActual: (state, valor) ->
-            state.usuarioActual = valor
-            if localStorage? then localStorage.setItem "usuario", YAML.stringify valor
+        cambiarNavegador_hash: (state, valor) ->
+            state.navegador_hash = valor
+            if localStorage? then localStorage.setItem "navegador_hash", valor
+
+        agregarSuscripcion: (state, opcion) ->
+            nuevasSuscr = Object.assign({}, state.suscripciones)
+            nuevasSuscr[opcion] = true
+            state.suscripciones = nuevasSuscr
+            if localStorage?
+                localStorage.setItem "suscripciones", (YAML.stringify nuevasSuscr)
+
+        eliminarSuscripcion: (state, opcion) ->
+            nuevasSuscr = Object.assign {}, state.suscripciones[opcion]
+            delete nuevasSuscr[opcion]
+            state.suscripciones = nuevasSuscr
+            if localStorage?
+                localStorage.setItem "suscripciones", (YAML.stringify nuevasSuscr)
 
     actions: {}
