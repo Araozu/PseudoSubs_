@@ -8,7 +8,7 @@ import { register } from 'register-service-worker'
 * Privada: 6dOp0WChG-fLFSo9hRnMUn5S1BVBm3KhK9r0m4L-GoA
 * */
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production' || true) {
     register(`${process.env.BASE_URL}service-worker.js`, {
         ready() {
             console.log(
@@ -18,14 +18,6 @@ if (process.env.NODE_ENV === 'production') {
         },
         registered(registration) {
             console.log('Se ha registrado el Service worker.');
-            self.addEventListener("push", e => {
-                const data = e.data.json();
-                console.log("Recibi un push :D");
-                registration.showNotification(data.title, {
-                    body: "Notificacion de prueba",
-                    icon: "http://image.ibb.co/frYOFd/tmlogo.png"
-                });
-            });
         },
         cached() {
             console.log('Se ha cacheado el contenido para su uso sin internet.')
