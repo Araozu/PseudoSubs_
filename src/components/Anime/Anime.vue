@@ -34,7 +34,7 @@
 </template>
 
 <script lang="coffee">
-    import panelDescarga from "./panel-descarga.vue"
+    import panelDescarga from "./panel-descarga/panel-descarga.vue"
     import opEd from "./op-ed.vue"
     import YAML from "yaml"
 
