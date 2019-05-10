@@ -46,6 +46,7 @@ export obtenerLinks = (req, res) ->
                             gestorOpciones.agregarTarea()
 
                             retorno.opciones[opcion.num_opcion] =
+                                opcion_ID: opcion.opcion_ID
                                 formato: opcion.formato
                                 res: opcion.res
                                 servidor: opcion.res
