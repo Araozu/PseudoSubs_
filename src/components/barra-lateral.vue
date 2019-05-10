@@ -30,7 +30,7 @@
                         :src="modoSiguiente === 'oscuro'? '/img/github.svg': '/img/githubOsc.svg' ")
                 br.mostrarEnTablet
 
-                router-link(to="/cuenta")
+                router-link(to="/ajustes")
                     i.material-icons.texto2.mostrarEnTablet settings
 
                 div.ocultarEnTablet
