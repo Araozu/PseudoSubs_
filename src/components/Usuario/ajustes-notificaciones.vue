@@ -1,8 +1,12 @@
 <template lang="pug">
     div
-        div.titulo Notificaciones (No disponible)
+        div.titulo Notificaciones
         br
-        template(v-if="notf && serviceWorkers")
+        p Recomendamos utilizar Google Chrome, Firefox o Edge en su ultima versión.
+        br
+        template(v-if="$store.state.navegador_hash !== ''")
+            notificaciones-activas
+        template(v-else-if="notf && serviceWorkers")
             div.descr(v-if="estado === 0").
                 Registra tu navegador siguiendo estos pasos:
             br
@@ -37,18 +41,22 @@
                 span.num(:class="pushSuscrito? 'num--terminado': ''") 3
                 span.paso Suscribirse a las notificaciones
                 br
-                div.opc(v-if="estadoNotificaciones === 'Permitido' && notificacionesProbadas && !pushSuscrito")
+                div.opc(v-if="paso3Disp")
+                    p.
+                        Al presionar el boton te suscribirás y te enviaremos otra notificacion para
+                        confirmar tu subscripción.
+                    br
                     button.boton(@click="suscribirse()") Suscribirse
-            div.fin(v-if="pushSuscrito")
-                p Tu navegador está listo.
         template(v-else).
             Lo sentimos, tu navegador no soporta notificaciones. Actualiza tu navegador.
     //
 </template>
 
 <script lang="coffee">
+    import notificacionesActivas from "./notificaciones-activas.vue"
 
-    publicVapidKey = "BPA_MfechJ8EwyMC_5-GZsWFtjPCD6f2qAzW5ouxnMs73mGTsgtD47of0pO1rKtpyWiWKE8yZVHHzTGhLHbfVRI"
+    publicVapidKey =
+        "BPA_MfechJ8EwyMC_5-GZsWFtjPCD6f2qAzW5ouxnMs73mGTsgtD47of0pO1rKtpyWiWKE8yZVHHzTGhLHbfVRI"
 
     urlBase64ToUint8Array = (base64String) ->
         padding = '='.repeat((4 - base64String.length % 4) % 4);
@@ -78,6 +86,8 @@
             pushSuscrito: false
             numAleatorio: Math.ceil Math.random() * 100
             numIngresado: 0
+        components:
+            "notificaciones-activas": notificacionesActivas
         watch:
             numIngresado: (n, v) ->
                 if parseInt(n) is @numAleatorio
@@ -88,6 +98,8 @@
                     when "default" then "No preguntado"
                     when "granted" then "Permitido"
                     when "denied" then "Denegado"
+            paso3Disp: ->
+                @estadoNotificaciones == "Permitido" && @notificacionesProbadas && not @pushSuscrito
         methods:
             pedirNotificaciones: ->
                 vm = this
@@ -111,14 +123,19 @@
                         console.log subsStr
                         res = await fetch "#{vm.$store.state.servidor}/n/registrar", {
                             method: "POST"
-                            body: "google_ID=#{vm.$store.state.usuarioActual.googleID}&subscripcion=#{subsStr}"
+                            body: "subscripcion=#{subsStr}"
                             headers:
                                 "Content-Type": "application/x-www-form-urlencoded"
                         }
                         jsonRespuesta = await res.json()
-                        console.log jsonRespuesta
-                        if res.ok
+                        if jsonRespuesta.exito
                             vm.pushSuscrito = true
+                            navegador_hash = jsonRespuesta.payload.hash
+                            navegador_ID = jsonRespuesta.payload.navegador_ID
+                            vm.$store.commit "cambiarNavegador_hash", navegador_hash
+                        else
+                            console.log "Error al ejecutar: #{jsonRespuesta.error}"
+                            vm.notf = false
                     catch e
                         console.error e
 
@@ -144,10 +161,12 @@
             size: 1.5rem
         display: inline-block
         background-color: $colorSecundario
+        color: white
         height: 34px
         width: 34px
         text-align: center
         border-radius: 17px
+        user-select: none
 
     .num--terminado
         background-color: $colorPrincipal
