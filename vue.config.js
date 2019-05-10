@@ -23,8 +23,9 @@ module.exports = {
     css: undefined,
 
     pwa: {
+        workboxPluginMode: "InjectManifest",
         workboxOptions: {
-            skipWaiting: true
+            swSrc: __dirname + "/public/service-worker.js"
         }
     }
 };
