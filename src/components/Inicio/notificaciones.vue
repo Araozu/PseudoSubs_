@@ -3,37 +3,20 @@
         div.titulo.texto1 Notificaciones
         br
         p.descr.texto1.
-            Inicia sesión con Google y recibe notificaciones cuando salgan eps nuevos.
-            Solo los animes que tú decidas.<br>
-            <br>
-            Muy pronto...
+            Recibe notificaciones cuando salgan eps nuevos. Solo los animes que tú decidas
         br
-        div(:class="(NODE_ENV === 'production')? 'pronto': ''")
-            router-link.mas(to="/cuenta") Aprender más
-            boton-inicio-sesion
+        div
+            router-link.mas(to="/ajustes") Aprender más
     //
 </template>
 
 <script lang="coffee">
-    import botonInicioSesion from "../boton-inicio-sesion.vue"
 
     export default
         name: "notificaciones"
-        components:
-            "boton-inicio-sesion": botonInicioSesion
         data: ->
-            gSignInParams:
-                client_id: "27783367584-1hms6h62heplhlvsaihl8vqs7ho3o2b7.apps.googleusercontent.com"
             NODE_ENV: process.env.NODE_ENV
-        methods:
-            alIniciarSesion: (googleUser) ->
-                token = googleUser.getAuthResponse().id_token
-                xhr = new XMLHttpRequest()
-                xhr.open "POST", "#{this.$store.state.servidor}/u/validar"
-                xhr.setRequestHeader "Content-Type", "application/x-www-form-urlencoded"
-                xhr.onload = ->
-                    console.log xhr.responseText
-                xhr.send "idToken=#{token}"
+
     #
 
 </script>
