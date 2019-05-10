@@ -15,6 +15,7 @@
         "express": "^4.16.4",
         "mysql": "^2.17.1",
         "register-service-worker": "^1.6.2",
+        "sha-hasher": "^1.0.5",
         "vue": "^2.6.6",
         "vue-analytics": "^5.16.4",
         "vue-disqus": "^3.0.5",
