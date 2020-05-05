@@ -11,9 +11,6 @@
     import "./assets/sass/global.sass"
     import "./assets/sass/modo-claro.sass"
     import barraLateral from "./components/barra-lateral.vue"
-    import YAML from "yaml"
-
-    DEV = process.env.NODE_ENV == "development"
 
     export default
         name: "App"
@@ -21,24 +18,14 @@
             largoVentana: window.innerWidth
         components:
             'barra-lateral': barraLateral
-        created: ->
+        mounted: ->
             store = @$store
-            fetch("#{this.$store.state.servidor}/anime", {
-                method: "POST"
-                headers:
-                    "Content-Type": "application/x-www-form-urlencoded"
-            })
-                .then (x) -> x.text()
-                .then (res) ->
-                    # if DEV then console.log res
-                    resultado = YAML.parse res
+            resTxt =  await fetch "#{this.$store.state.servidor}/data/animes.json"
+            resultado = await resTxt.json();
+            store.commit "establecerAnime", resultado
 
-                    if resultado.exito
-                        store.commit "establecerAnime", resultado.payload
-                    else
-                        console.log "Error al obtener los animes.\n#{res}"
+
 #
-
 </script>
 
 <style lang="sass">

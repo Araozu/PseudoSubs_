@@ -1,0 +1,211 @@
+[
+  {
+    "ed_id": 1,
+    "anime_id": 29,
+    "num_ed": 1,
+    "nombre": "Mimei no Kimi to Hakumei no Mahou",
+    "artista": "Yanagi Nagi",
+    "eps": "1 al 13"
+  },
+  {
+    "ed_id": 2,
+    "anime_id": 28,
+    "num_ed": 1,
+    "nombre": "Gin no Kisei",
+    "artista": "Soraru",
+    "eps": "1 al 12"
+  },
+  {
+    "ed_id": 3,
+    "anime_id": 27,
+    "num_ed": 1,
+    "nombre": "Silent Solitude",
+    "artista": "OxT",
+    "eps": "1 al 12"
+  },
+  {
+    "ed_id": 4,
+    "anime_id": 26,
+    "num_ed": 1,
+    "nombre": "Prayer X",
+    "artista": "King Gnu",
+    "eps": "1 al 13"
+  },
+  {
+    "ed_id": 5,
+    "anime_id": 26,
+    "num_ed": 2,
+    "nombre": "RED",
+    "artista": "Survive Said The Prophet",
+    "eps": "14-24"
+  },
+  {
+    "ed_id": 6,
+    "anime_id": 25,
+    "num_ed": 1,
+    "nombre": "LAST GAME",
+    "artista": "Zwei",
+    "eps": "2 al 7 y 9 al 13"
+  },
+  {
+    "ed_id": 7,
+    "anime_id": 25,
+    "num_ed": 2,
+    "nombre": "Lyra",
+    "artista": "Zwei",
+    "eps": "8 y 18"
+  },
+  {
+    "ed_id": 8,
+    "anime_id": 25,
+    "num_ed": 3,
+    "nombre": "World Line",
+    "artista": "Asami Imai",
+    "eps": "14 al 17 y 19 al 20"
+  },
+  {
+    "ed_id": 9,
+    "anime_id": 25,
+    "num_ed": 4,
+    "nombre": "GATE OF STEINER",
+    "artista": "Sasaki Eri",
+    "eps": "23"
+  },
+  {
+    "ed_id": 10,
+    "anime_id": 24,
+    "num_ed": 1,
+    "nombre": "Zenzen Tomodachi",
+    "artista": "Haruka Yamazaki",
+    "eps": "1 al 12"
+  },
+  {
+    "ed_id": 11,
+    "anime_id": 23,
+    "num_ed": 1,
+    "nombre": "Kimi no Tonari",
+    "artista": "halca",
+    "eps": "1 al 8 y 10 al 11"
+  },
+  {
+    "ed_id": 12,
+    "anime_id": 23,
+    "num_ed": 2,
+    "nombre": "Ashita mo Mata",
+    "artista": "halca",
+    "eps": "9"
+  },
+  {
+    "ed_id": 13,
+    "anime_id": 22,
+    "num_ed": 1,
+    "nombre": "Atria",
+    "artista": "FoxTails",
+    "eps": "14 al 24"
+  },
+  {
+    "ed_id": 14,
+    "anime_id": 21,
+    "num_ed": 1,
+    "nombre": "Michishirube",
+    "artista": "Minori Chihara",
+    "eps": "2 al 8"
+  },
+  {
+    "ed_id": 15,
+    "anime_id": 21,
+    "num_ed": 2,
+    "nombre": "Believe in...",
+    "artista": "Aira Yuuki",
+    "eps": "9"
+  },
+  {
+    "ed_id": 16,
+    "anime_id": 20,
+    "num_ed": 1,
+    "nombre": "Ai wo Oshiete Kureta Kimi e",
+    "artista": "Qaijff",
+    "eps": "1 al 11"
+  },
+  {
+    "ed_id": 17,
+    "anime_id": 19,
+    "num_ed": 1,
+    "nombre": "Step Up LOVE",
+    "artista": "DAOKO x Yasuyuki Okamura",
+    "eps": "2 al 12"
+  },
+  {
+    "ed_id": 18,
+    "anime_id": 18,
+    "num_ed": 1,
+    "nombre": "behind",
+    "artista": "Mio Natsume (Karin Isobe), Hatsuki Morikawa (Yuna Yoshino), Ena Komiya (Lynn)",
+    "eps": "2 al 12"
+  },
+  {
+    "ed_id": 19,
+    "anime_id": 17,
+    "num_ed": 1,
+    "nombre": "Kyokyo Jitsujitsu",
+    "artista": "nano.RIPE",
+    "eps": "1 al 12"
+  },
+  {
+    "ed_id": 20,
+    "anime_id": 16,
+    "num_ed": 1,
+    "nombre": "LAYon-theLINE",
+    "artista": "D-selections",
+    "eps": "1 al 8 y 10 al 12"
+  },
+  {
+    "ed_id": 21,
+    "anime_id": 16,
+    "num_ed": 2,
+    "nombre": "Koi no Russian Roulette",
+    "artista": "Yumemi Yumemite (Yuu Serizawa)",
+    "eps": "9"
+  },
+  {
+    "ed_id": 22,
+    "anime_id": 15,
+    "num_ed": 1,
+    "nombre": "gravityWall",
+    "artista": "SawanoHiroyuki[nZk]:Tielle",
+    "eps": "1 y 22"
+  },
+  {
+    "ed_id": 23,
+    "anime_id": 15,
+    "num_ed": 2,
+    "nombre": "NEWLOOK",
+    "artista": "Mashiro Ayano",
+    "eps": "2 al 12"
+  },
+  {
+    "ed_id": 24,
+    "anime_id": 15,
+    "num_ed": 3,
+    "nombre": "world Étude",
+    "artista": "Aki Toyosaki",
+    "eps": "13"
+  },
+  {
+    "ed_id": 25,
+    "anime_id": 15,
+    "num_ed": 4,
+    "nombre": "Rubikon",
+    "artista": "Sangatsu no Phantasia",
+    "eps": "14 al 21"
+  },
+  {
+    "ed_id": 26,
+    "anime_id": 14,
+    "num_ed": 1,
+    "nombre": "FLIP FLAP FLIP FLAP",
+    "artista": "TO-MAS feat.Chima",
+    "eps": "1 al 13"
+  }
+]
+

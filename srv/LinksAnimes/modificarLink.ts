@@ -1,4 +1,4 @@
-import {con} from "../index";
+import { con } from "../index";
 
 const modificarLink = (req: any, res: any) => {
 

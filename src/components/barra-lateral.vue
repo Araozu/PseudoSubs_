@@ -1,5 +1,4 @@
-<!-- TODO: Re-escribir para que la funcionalidad sea igual pero el codigo no sea asi de horrible.
- Barra Lateral. Responsivo hasta los 285px de ancho. -->
+<!-- TODO: Re-escribir para que la funcionalidad sea igual pero el codigo no sea asi de horrible. -->
 <template lang="pug">
     div.barra
         div.lateral.fondo2.ocultarEnMovil.barraOculta
@@ -7,7 +6,7 @@
                 {{ $store.state.barraLateralOculta? '>>': '<<' }}
 
             router-link.linkImg(to="/" title="Ir al inicio")
-                img.tarjeta(src="../assets/img/logo.svg")
+                img.tarjeta(src="/img/logo.svg")
 
             div.items.tarjeta.fondo1.texto2
                 div.cambiarModo(@click="cambiarModoColor()")

@@ -9,7 +9,7 @@
 
                 router-link(:to="anime.link")
                     div.imgCont
-                        img.imagen.tarjeta(:src="anime.imgUrl")
+                        img.imagen.tarjeta(:src="anime.imgurl" :alt="'Imagen de ' + anime.titulo")
                 div.animeCont
                     div.descr {{ anime.descripcion }}
                     br
@@ -91,8 +91,8 @@
                 ), 5000
         beforeDestroy: ->
             clearInterval @intervalo
-#
 
+#
 </script>
 
 <style scoped lang="sass">

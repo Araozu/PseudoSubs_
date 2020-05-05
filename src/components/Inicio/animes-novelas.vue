@@ -4,7 +4,7 @@
             span.anime.tarjeta
                 div.titulo.texto1 Anime
                 div.titulo__descr.texto1 Ligero/MP4/MKV 720p/1080p 24fps/60fps
-        router-link(to="/Novelas")
+        // router-link(to="/Novelas")
             span.novelas.tarjeta
                 div.titulo.texto1 Novelas
                 div.titulo__descr.texto1 Redistribuyendo legalmente lo ilegal.
@@ -25,7 +25,7 @@
         margin: 50px 0
 
         .anime, .novelas
-            width: 50%
+            width: 100%
             display: inline-block
             padding: 20px
 

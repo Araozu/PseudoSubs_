@@ -1,0 +1,308 @@
+[
+  {
+    "opcion_id": 1,
+    "links_id": 1,
+    "num_opcion": 3,
+    "formato": "MKV",
+    "res": "1080p@60fps",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 2,
+    "links_id": 3,
+    "num_opcion": 1,
+    "formato": "MP4",
+    "res": "720p",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 3,
+    "links_id": 3,
+    "num_opcion": 2,
+    "formato": "MKV",
+    "res": "1080p",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 4,
+    "links_id": 4,
+    "num_opcion": 1,
+    "formato": "MP4",
+    "res": "720p@60fps",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 5,
+    "links_id": 4,
+    "num_opcion": 2,
+    "formato": "MKV",
+    "res": "1080p@60fps",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 6,
+    "links_id": 5,
+    "num_opcion": 1,
+    "formato": "MKV",
+    "res": "720p",
+    "servidor": "MEGA | OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 7,
+    "links_id": 5,
+    "num_opcion": 2,
+    "formato": "MP4",
+    "res": "1080p",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 8,
+    "links_id": 6,
+    "num_opcion": 1,
+    "formato": "MP4",
+    "res": "720p",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 9,
+    "links_id": 6,
+    "num_opcion": 2,
+    "formato": "MKV",
+    "res": "1080p",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 10,
+    "links_id": 7,
+    "num_opcion": 1,
+    "formato": "MP4",
+    "res": "720p",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 11,
+    "links_id": 7,
+    "num_opcion": 2,
+    "formato": "MKV",
+    "res": "1080p",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 12,
+    "links_id": 8,
+    "num_opcion": 1,
+    "formato": "MP4",
+    "res": "ligero",
+    "servidor": "MEGA",
+    "color": "red"
+  },
+  {
+    "opcion_id": 13,
+    "links_id": 8,
+    "num_opcion": 2,
+    "formato": "MP4",
+    "res": "720p@60fps",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 14,
+    "links_id": 8,
+    "num_opcion": 3,
+    "formato": "MKV",
+    "res": "1080p@60fps",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 15,
+    "links_id": 1,
+    "num_opcion": 1,
+    "formato": "MP4",
+    "res": "ligero",
+    "servidor": "MEGA",
+    "color": "red"
+  },
+  {
+    "opcion_id": 16,
+    "links_id": 1,
+    "num_opcion": 2,
+    "formato": "MP4",
+    "res": "720p@60fps",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 17,
+    "links_id": 9,
+    "num_opcion": 1,
+    "formato": "MP4",
+    "res": "720p",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 18,
+    "links_id": 9,
+    "num_opcion": 2,
+    "formato": "MP4",
+    "res": "1080p",
+    "servidor": "OneDrive",
+    "color": "rgb(47, 112, 144)"
+  },
+  {
+    "opcion_id": 19,
+    "links_id": 10,
+    "num_opcion": 1,
+    "formato": "MP4",
+    "res": "ligero",
+    "servidor": "OneDrive",
+    "color": "rgb(47,112,144)"
+  },
+  {
+    "opcion_id": 20,
+    "links_id": 10,
+    "num_opcion": 2,
+    "formato": "MP4",
+    "res": "1080p",
+    "servidor": "OneDrive",
+    "color": "rgb(47,112,144)"
+  },
+  {
+    "opcion_id": 21,
+    "links_id": 11,
+    "num_opcion": 1,
+    "formato": "MP4",
+    "res": "ligero@60fps",
+    "servidor": "MEGA",
+    "color": "red"
+  },
+  {
+    "opcion_id": 22,
+    "links_id": 11,
+    "num_opcion": 2,
+    "formato": "MP4",
+    "res": "1080p@60fps",
+    "servidor": "OneDrive",
+    "color": "rgb(47,112,144)"
+  },
+  {
+    "opcion_id": 23,
+    "links_id": 11,
+    "num_opcion": 3,
+    "formato": "MKV",
+    "res": "1080p@60fps",
+    "servidor": "OneDrive",
+    "color": "rgb(47,112,144)"
+  },
+  {
+    "opcion_id": 24,
+    "links_id": 12,
+    "num_opcion": 1,
+    "formato": "MP4",
+    "res": "720p",
+    "servidor": "MEGA",
+    "color": null
+  },
+  {
+    "opcion_id": 25,
+    "links_id": 13,
+    "num_opcion": 1,
+    "formato": "MKV",
+    "res": "720p@60fps",
+    "servidor": "MEGA",
+    "color": "red"
+  },
+  {
+    "opcion_id": 26,
+    "links_id": 13,
+    "num_opcion": 2,
+    "formato": "MP4",
+    "res": "720p@60fps",
+    "servidor": "OneDrive",
+    "color": "blue"
+  },
+  {
+    "opcion_id": 27,
+    "links_id": 13,
+    "num_opcion": 3,
+    "formato": "MKV",
+    "res": "1080p@60fps",
+    "servidor": "OneDrive",
+    "color": "blue"
+  },
+  {
+    "opcion_id": 28,
+    "links_id": 14,
+    "num_opcion": 1,
+    "formato": "MKV",
+    "res": "720p",
+    "servidor": "MEGA",
+    "color": "red"
+  },
+  {
+    "opcion_id": 29,
+    "links_id": 14,
+    "num_opcion": 2,
+    "formato": "MP4",
+    "res": "720p",
+    "servidor": "OneDrive",
+    "color": "blue"
+  },
+  {
+    "opcion_id": 30,
+    "links_id": 14,
+    "num_opcion": 3,
+    "formato": "MP4",
+    "res": "1080p",
+    "servidor": "OneDrive",
+    "color": "blue"
+  },
+  {
+    "opcion_id": 32,
+    "links_id": 14,
+    "num_opcion": 4,
+    "formato": "MKV",
+    "res": "1080p",
+    "servidor": "OneDrive",
+    "color": "blue"
+  },
+  {
+    "opcion_id": 33,
+    "links_id": 15,
+    "num_opcion": 1,
+    "formato": "MKV",
+    "res": "720p",
+    "servidor": "Mega",
+    "color": null
+  },
+  {
+    "opcion_id": 34,
+    "links_id": 15,
+    "num_opcion": 2,
+    "formato": "MP4",
+    "res": "720p",
+    "servidor": "Mega",
+    "color": null
+  },
+  {
+    "opcion_id": 35,
+    "links_id": 15,
+    "num_opcion": 3,
+    "formato": "MP4",
+    "res": "1080p",
+    "servidor": "OneDrive",
+    "color": null
+  }
+]

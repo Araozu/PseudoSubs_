@@ -11,7 +11,7 @@
                     br
                     br
                     br
-                    router-link.comparar(to="/comparar") Comparar pixel a pixel.
+                    // router-link.comparar(to="/comparar") Comparar pixel a pixel.
         //
 
 </template>

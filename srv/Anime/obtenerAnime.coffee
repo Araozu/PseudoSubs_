@@ -1,6 +1,6 @@
 import {con} from "../index"
 import YAML from "yaml"
-
+ 
 export default (req, res) ->
     if req.params.id?
         idAnime = req.params.id

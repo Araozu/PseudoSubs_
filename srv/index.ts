@@ -1,8 +1,11 @@
 const mysql = require("mysql");
+const { Client } = require("pg");
+const express = require("express");
 
 import obtenerAnimes from "./Anime/obtenerAnime"
 import obtenerTodosAnimes from "./Anime/obtenerTodosAnimes"
 
+/*
 export const webPush = require("web-push");
 webPush.setVapidDetails(
     "mailto:tbyuyfcjjll@gmail.com",
@@ -10,6 +13,9 @@ webPush.setVapidDetails(
     "6dOp0WChG-fLFSo9hRnMUn5S1BVBm3KhK9r0m4L-GoA"
 );
 
+ */
+
+/*
 export const con = mysql.createConnection({
     host: "127.0.0.1",
     user: "pseubntq_araozu",
@@ -24,14 +30,26 @@ con.connect(err => {
         console.log("Exito al conectarse a la base de datos :D");
     }
 });
+*/
+
+const client = new Client({
+    user: 'araozu',
+    host: "144.91.91.191",
+    database: 'pseudo',
+    password: 'xsakah4b',
+    port: 5432,
+});
+client.connect();
+
+export const con = client;
 
 export const fun = app => {
-    const bodyParser = require("body-parser");
-    app.use(bodyParser.urlencoded({ extended: true }));
-    // app.use(bodyParser.json);
+
+    app.use(express.urlencoded({ extended: true }));
+    app.use(express.json);
 
     app.post("/anime/:id", obtenerAnimes);
-    app.post("/anime", obtenerTodosAnimes);
+    app.get("/anime", obtenerTodosAnimes);
 
     app.post("/u/validar", require("./Usuarios/ValidarUsuario").fun);
 
@@ -46,7 +64,7 @@ export const fun = app => {
     app.post("/eps/links/", require("./Links/crearLinks").fun);
 
     /**
-     * Rutas Legacy :c */
+     * Rutas Legacy :c *
 
     app.post('/links', require('./LinksAnimes/obtenerLinks').obtenerLinks);
     app.put('/links', require('./LinksAnimes/modificarLink').modificarLinks);
@@ -58,7 +76,7 @@ export const fun = app => {
 
     app.post('/estadisticas', require('./Admin/Eps/estadisticas').estadisticas);
 
-    // Fin
+    // Fin */
 
     /*
     * Claves VAPID

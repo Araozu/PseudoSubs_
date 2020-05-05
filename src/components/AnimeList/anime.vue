@@ -4,7 +4,8 @@
             router-link.titulo.texto1(:to="anime.link") {{ anime.titulo }}
             br
             router-link.link(:to="anime.link")
-                img.imagen(:src="anime.imgUrl")
+                img.imagen(:src="anime.imgurl" :alt="'Img de ' + anime.titulo")
+
     //
 </template>
 
