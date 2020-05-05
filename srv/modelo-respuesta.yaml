@@ -1,6 +1,0 @@
-exito: true|false
-payload: datos
-error:
-  razon: Razon por la que el error sucedió
-  ruta: Ruta al archivo de error en el backend
-  adicional: Datos adicionales, como query SQL, o stack trace del error.

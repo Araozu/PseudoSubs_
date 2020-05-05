@@ -7,7 +7,6 @@ import AnimeList from "./views/AnimeList.vue"
 import listaAnimes from "./components/AnimeList/lista-animes.vue"
 import Anime from "./components/Anime/Anime.vue"
 import Error404 from "./views/Error404.vue"
-import Admin from "./views/Admin.vue"
 
 Vue.use Router
 
@@ -37,10 +36,6 @@ export default new Router
         path: "/ajustes"
         name: "Usuario"
         component: Usuario
-    ,
-        path: "/admin"
-        name: "Admin"
-        component: Admin
     ,
         path: "*"
         name: "404"
