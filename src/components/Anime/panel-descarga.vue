@@ -25,8 +25,7 @@
                         <span v-for="(ep, num) in opcion.eps" class="panel__descripcion__link">
                           <br>
                           Episodio {{ num }} ->
-                          <a :href="ep.link" target="_blank" :style="'color: ' + balancearColor"
-                             @mousedown.stop="incrementarContador(ep.ep_ID, $event)">
+                          <a :href="ep.link" target="_blank" :style="'color: ' + balancearColor">
                               {{ ep.peso }}
                           </a>
                         </span>
@@ -42,13 +41,11 @@
 </template>
 
 <script>
-    import YAML from "yaml"
-
     const esModoOscuro = false;
 
     export default {
         name: "panelDeDescarga",
-        data: function () {
+        data () {
             return {
                 posActual: '1',
                 datos: {},
@@ -70,6 +67,11 @@
                 required: true
             }
         },
+        watch: {
+            epsOpcionesMeta() {
+                this.actualizarEpsOpciones();
+            }
+        },
         computed: {
             balancearColor() {
                 const color = this.color;
@@ -85,6 +87,12 @@
                     return color;
                 }
 
+            },
+            epsOpciones() {
+                return this.$store.state.episodios_opciones;
+            },
+            epsOpcionesMeta() {
+                return this.$store.state.episodios_opciones_meta;
             }
         },
         methods: {
@@ -119,21 +127,40 @@
                         elemNuevo + " " + elemAnterior + " " + opcionAnterior + " " + opcionNueva);
                 }
             },
-            incrementarContador(ep_ID, evento) {
-
-                const xhr = new XMLHttpRequest();
-                xhr.open("PUT", `${this.$store.state.servidor}/links`);
-                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                xhr.onload = () => {
-                    console.log(xhr.responseText);
-                };
-                xhr.send(`ep_ID=${ep_ID}`);
-
+            actualizarEpsOpciones() {
+                console.log("Llamando...");
+                const vm = this;
+                const epsOpciones = this.epsOpciones;
+                const epsOpcionesMeta = this.epsOpcionesMeta;
+                if (epsOpcionesMeta.length > 0) {
+                    const opcionMeta = epsOpcionesMeta.find(x => x.anime_id === this.animeid);
+                    vm.mostrarSpinnerParaCargaDeEps = false;
+                    this.datos = epsOpciones;
+                    this.datosCorrectos = true;
+                    vm.cambiarAviso(opcionMeta.aviso);
+                } else {
+                    vm.mostrarSpinnerParaCargaDeEps = false;
+                }
             }
         },
-        created() {
+        mounted () {
+            console.log("Montado");
+            this.actualizarEpsOpciones();
+        }
+        /*
+        mounted() {
             const xhr = new XMLHttpRequest();
             const vm = this;
+
+            const epsOpciones = this.$store.state.episodios_opciones;
+            if (epsOpciones.length > 0) {
+                const epsOpciones = epsOpciones.filter(x => true);
+                vm.mostrarSpinnerParaCargaDeEps = false;
+                this.datos = epsOpciones;
+                this.datosCorrectos = true;
+            } else {
+                vm.mostrarSpinnerParaCargaDeEps = false;
+            }
 
             xhr.open("POST", `${this.$store.state.servidor}/links`);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -156,7 +183,7 @@
 
             };
             xhr.send(`animeID=${this.animeid}`);
-        }
+        } // */
 
     }
 </script>

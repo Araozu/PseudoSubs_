@@ -4,15 +4,36 @@ import YAML from "yaml"
 
 Vue.use(Vuex)
 
-DEV = process.env.NODE_ENV == "development"
+almacenarEnLocalStorage = (clave, valor, fnActualizar) =>
+    datosTxt = JSON.stringify valor
+    datosLocal = localStorage?.getItem clave
+    unless datosTxt is datosLocal
+        localStorage?.setItem clave, datosTxt
+        fnActualizar valor
+
 
 export default new Vuex.Store
     state:
-        servidor: unless DEV then "" else ""
+        servidor: ""
 
         animes:
             if localStorage?
-                YAML.parse ((localStorage.getItem "animes") ? "[]")
+                JSON.parse ((localStorage.getItem "animes") ? "[]")
+            else []
+
+        episodios:
+            if localStorage?
+                JSON.parse ((localStorage.getItem "episodios") ? "[]")
+            else []
+
+        episodios_opciones:
+            if localStorage?
+                JSON.parse ((localStorage.getItem "episodios_opciones") ? "[]")
+            else []
+
+        episodios_opciones_meta:
+            if localStorage?
+                JSON.parse ((localStorage.getItem "episodios_opciones_meta") ? "[]")
             else []
 
         modoColor: (localStorage?.getItem "modoColor") ? "claro"
@@ -29,19 +50,25 @@ export default new Vuex.Store
 
         suscripciones:
             if localStorage?
-                YAML.parse ((localStorage.getItem "suscripciones") ? "{}")
+                JSON.parse ((localStorage.getItem "suscripciones") ? "{}")
             else {}
 
     mutations:
         establecerAnime: (state, animes) ->
-            animesTxt = YAML.stringify animes
-            animesLocal = localStorage?.getItem "animes"
-            unless animesTxt is animesLocal
-                localStorage?.setItem "animes", animesTxt
-                state.animes = animes
-                if DEV then console.log "Actualicé los animes"
-            else
-                if DEV then console.log "Ahorré tener que actualizar todo v:"
+            fnActualizar = (v) => state.animes = v
+            almacenarEnLocalStorage "animes", animes, fnActualizar
+
+        establecerEpisodios: (state, episodios) ->
+            fnActualizar = (v) => state.episodios = v
+            almacenarEnLocalStorage "episodios", episodios, fnActualizar
+
+        establecerEpisodiosOpciones: (state, episodios) ->
+            fnActualizar = (v) => state.episodios_opciones = v
+            almacenarEnLocalStorage "episodios_opciones", episodios, fnActualizar
+
+        establecerEpisodiosOpcionesMeta: (state, episodios) ->
+            fnActualizar = (v) => state.episodios_opciones_meta = v
+            almacenarEnLocalStorage "episodios_opciones_meta", episodios, fnActualizar
 
         cambiarModoColor: (state, color) ->
             state.modoColor = color
@@ -60,23 +87,5 @@ export default new Vuex.Store
 
         cambiarRutaActual: (state, valor) ->
             state.rutaActual = valor
-
-        cambiarNavegador_hash: (state, valor) ->
-            state.navegador_hash = valor
-            if localStorage? then localStorage.setItem "navegador_hash", valor
-
-        agregarSuscripcion: (state, opcion) ->
-            nuevasSuscr = Object.assign({}, state.suscripciones)
-            nuevasSuscr[opcion] = true
-            state.suscripciones = nuevasSuscr
-            if localStorage?
-                localStorage.setItem "suscripciones", (YAML.stringify nuevasSuscr)
-
-        eliminarSuscripcion: (state, opcion) ->
-            nuevasSuscr = Object.assign {}, state.suscripciones[opcion]
-            delete nuevasSuscr[opcion]
-            state.suscripciones = nuevasSuscr
-            if localStorage?
-                localStorage.setItem "suscripciones", (YAML.stringify nuevasSuscr)
 
     actions: {}

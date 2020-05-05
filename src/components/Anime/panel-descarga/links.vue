@@ -1,25 +1,14 @@
 <template lang="pug">
     div(:id="`tarjeta${indice}`" :style="indice !== '1'? 'display: none' : ''")
-        div.notf(v-if="enEmision")
-            div.titulo(:style="'color: ' + color") Notificaciones
-            br
-            div.notf--ind(v-if="$store.state.navegador_hash !== '' || true")
-                boton-nuevos-eps(:opcion="opcion.opcion_ID")
-                span Avísame cuando salgan nuevos episodios.
-            template(v-else)
-                span Suscríbete&nbsp;
-                router-link(to="/ajustes" :style="'color: ' + color") aquí
-                span &nbsp;para recibir notificaciones cuando salgan episodios nuevos.
-        br
         div.titulo(:style="'color: ' + color") Links
         p Todos los links se abren en una pestaña nueva.<br>
         span.link(v-for="(ep, num) in opcion.eps")
             br
-            span Episodio {{ num }} ->
+            span Episodio {{ ep.num_ep }} ->&nbsp;
             a(
                 :href="ep.link" target="_blank" :style="'color: ' + color"
-                @mousedown.stop="incrementarContador(ep.ep_ID, $event)"
             ) {{ ep.peso }}
+
     //
 </template>
 <!-- TODO: arreglar funcionamiento de los links -->
@@ -32,7 +21,7 @@
             "boton-nuevos-eps": botonNuevosEps
         props:
             indice:
-                type: String
+                type: Number
                 required: true
             opcion:
                 type: Object

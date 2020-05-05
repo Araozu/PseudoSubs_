@@ -16,14 +16,6 @@
                 hr
                 br
 
-                router-link(to="/")
-                    i.material-icons.texto2.mostrarEnTablet(title="Nosotros") group
-                br.mostrarEnTablet
-
-                router-link(to="/")
-                    i.material-icons.texto2.mostrarEnTablet(title="Ayuda") help
-                br.mostrarEnTablet
-
                 a(href="https://github.com/Araozu/PseudoSubs_" target="_blank" title="GitHub")
                     img.imgGitHub.texto2.mostrarEnTablet(
                         :src="modoSiguiente === 'oscuro'? '/img/github.svg': '/img/githubOsc.svg' ")
@@ -47,7 +39,7 @@
         div.inferior.texto2.fondo1.mostrarEnMovil
             span.tituloInf
                 template(v-for="i in $store.state.rutaActual")
-                    router-link.linkBarra(:to="i.ruta") {{ i.nombre }}
+                    router-link.linkBarra(:to="i.ruta? i.ruta: '/'") {{ i.nombre }}
                     span  >
             div.links
                 i.material-icons.texto2.mostrarEnTablet(@click="cambiarModoColor()").

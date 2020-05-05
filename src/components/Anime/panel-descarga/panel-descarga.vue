@@ -45,6 +45,10 @@
             cambiarAviso:
                 type: Function,
                 required: true
+        computed:
+            eps: -> @$store.state.episodios
+            epsOpciones: -> @$store.state.episodios_opciones
+            epsOpcionesMeta: -> @$store.state.episodios_opciones_meta
         methods:
             cambiarDescripcionDescarga: (idDestino) ->
                 quitarClase = (nombre, nombreClase) =>
@@ -84,30 +88,40 @@
                     console.log xhr.responseText
                 xhr.send "ep_ID=#{ep_ID}"
 
-        created: ->
-            xhr = new XMLHttpRequest()
-            vm = this
+            actualizarOpciones: () ->
+                vm = this
+                eps = @eps
+                epsOpciones = @epsOpciones
+                epsOpcionesMeta = @epsOpcionesMeta
+                animeId = @animeid
+                if epsOpcionesMeta.length > 0
+                    opcionMeta = epsOpcionesMeta.find (x) => x.anime_id == animeId
+                    if opcionMeta?
+                        opciones = epsOpciones.filter (x) => x.links_id == opcionMeta.links_id
 
-            xhr.open "POST", "#{this.$store.state.servidor}/links"
-            xhr.setRequestHeader "Content-Type", "application/x-www-form-urlencoded"
-            xhr.onload = ->
-                try
-                    data = YAML.parse xhr.responseText
-                    if data.exito
-                        vm.datos = data.payload["opciones"]
-                        vm.sigEp = data.payload.sigEp
+                        vm.mostrarSpinnerParaCargaDeEps = false
+                        vm.datos = opciones.map (opcion) =>
+                            episodios = eps.filter (ep) => ep.opcion_id == opcion.opcion_id
+                            console.log episodios
+                            { eps: episodios, opcion... }
+
                         vm.datosCorrectos = true
-                        vm.cambiarAviso data.payload.aviso
+                        vm.cambiarAviso(opcionMeta.aviso)
                     else
                         vm.mostrarSpinnerParaCargaDeEps = false
-                        console.log ("Error al recibir los eps del anime. resp:\n" + xhr.responseText)
-                catch e
+                else
                     vm.mostrarSpinnerParaCargaDeEps = false
-                    console.log ("Error al recibir los eps del anime:\n" + e + "\n" + xhr.responseText)
 
-            xhr.send "animeID=#{this.animeid}"
-    #
+        created: ->
+            vm = this
+            intervalo = setInterval (=>
+                if vm.epsOpciones.length > 0 && vm.epsOpcionesMeta.length > 0 && vm.eps.length > 0
+                    clearInterval intervalo
+                    vm.actualizarOpciones()
+            ), 250
 
+
+#
 </script>
 
 <style scoped lang="sass">

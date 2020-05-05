@@ -19,10 +19,27 @@
         components:
             'barra-lateral': barraLateral
         mounted: ->
-            store = @$store
-            resTxt =  await fetch "#{this.$store.state.servidor}/data/animes.json"
-            resultado = await resTxt.json()
-            store.commit "establecerAnime", resultado
+            vm = this
+            do =>
+                resTxt = await fetch "#{@$store.state.servidor}/data/animes.json"
+                resultado = await resTxt.json()
+                vm.$store.commit "establecerAnime", resultado
+
+            do =>
+                epsRaw = await fetch "#{@$store.state.servidor}/data/episodios.json"
+                eps = await epsRaw.json()
+                vm.$store.commit "establecerEpisodios", eps
+
+            do =>
+                epsOpcRaw = await fetch "#{@$store.state.servidor}/data/episodios_opciones.json"
+                epsOpc = await epsOpcRaw.json()
+                vm.$store.commit "establecerEpisodiosOpciones", epsOpc
+
+            do =>
+                epsOpcMetaRaw = await fetch "#{@$store.state.servidor}/data/episodios_opciones_meta.json"
+                epsOpcMeta = await epsOpcMetaRaw.json()
+                vm.$store.commit "establecerEpisodiosOpcionesMeta", epsOpcMeta
+
 
 
 #

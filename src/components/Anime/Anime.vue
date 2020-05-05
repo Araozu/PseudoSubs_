@@ -19,11 +19,11 @@
                             div.temporada Temporada: {{ anime.temporada + " " + anime.anio }}
                             div.fuente Fuente: {{ anime.fuente }}
                             div.generos Generos: {{ anime.generos }}
-                        op-ed(:anime_ID="anime.anime_ID" :color="anime.color")
+                        op-ed(:anime_ID="anime.anime_id" :color="anime.color")
                     br
                     div.tarjeta.aviso(:style="colorBackground") {{ aviso }}
                     br
-                    panel-de-descarga(:animeid="anime.anime_ID" :color="anime.color"
+                    panel-de-descarga(:animeid="anime.anime_id" :color="anime.color"
                         :cambiar-aviso="cambiarAviso")
                     br
                     div.tarjeta.background__disqus
@@ -58,7 +58,9 @@
             vm = this
             animes = @$store.state.animes
             resultado = -1
+            console.log animes
             for anime in animes
+                console.log "Param is #{@$route.params.nombre}"
                 if anime.link is "/Anime/" + @$route.params.nombre
                     vm.anime = anime
                     resultado = 1
@@ -80,9 +82,7 @@
             ]
 
 
-
-    #
-
+#
 </script>
 
 <style scoped lang="sass">

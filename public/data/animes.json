@@ -47,7 +47,7 @@
     {
         "anime_id": 29,
         "titulo": "Irozuku Sekai no Ashita Kara",
-        "link": "/Anime/2018/Otono/IrozuKai",
+        "link": "/Anime/IrozuKai",
         "imgurl": "https://cdn.myanimelist.net/images/anime/1424/93855l.jpg",
         "descripcion": "Ambientada en la ciudad de Nagasaki, la historia tiene lugar en un mundo en el que una cantidad minúscula de magia permanece en la vida cotidiana. Hitomi Tsukishiro es una descendiente de 17 años de una familia de brujas que creció con emociones vivas, ya que perdió su sentido del color a una edad muy temprana. Sintiéndose mal por el futuro de su nieta, Kohaku, una gran bruja, envía a Hitomi al pasado, el año 2018. Mediante intercambios con su abuela de 17 años y los miembros de su club, la historia sigue el crecimiento de Hitomi como persona.",
         "estudio": "P.A. Works",
@@ -62,7 +62,7 @@
     {
         "anime_id": 28,
         "titulo": "Goblin Slayer",
-        "link": "/Anime/2018/Otono/Goblin-Slayer",
+        "link": "/Anime/Goblin-Slayer",
         "imgurl": "https://cdn.myanimelist.net/images/anime/1949/93415l.jpg",
         "descripcion": "Una joven sacerdotisa formó su primer grupo de aventureros, pero casi inmediatamente se encuentran angustiados. Es el Asesino de Duendes que viene a su rescate, un hombre que dedicó su vida al exterminio de todos los duendes, por cualquier medio necesario. Y cuando los rumores de sus hazañas comienzan a circular, no hay forma de saber quién podría venir a continuación...",
         "estudio": "White Fox",
@@ -77,7 +77,7 @@
     {
         "anime_id": 27,
         "titulo": "Overlord 3",
-        "link": "/Anime/2018/Verano/Overlord-3",
+        "link": "/Anime/Overlord-3",
         "imgurl": "https://cdn.myanimelist.net/images/anime/1511/93473l.jpg",
         "descripcion": "Tercera temporada de Overlord.",
         "estudio": "Madhouse",
@@ -92,7 +92,7 @@
     {
         "anime_id": 26,
         "titulo": "Banana Fish",
-        "link": "/Anime/2018/Verano/Banana-Fish",
+        "link": "/Anime/Banana-Fish",
         "imgurl": "https://cdn.myanimelist.net/images/anime/1190/93472l.jpg",
         "descripcion": "La naturaleza hizo a Ash Lynx hermoso; la crianza lo convirtió en un asesino despiadado y frío. Un fugitivo lo crió como el heredero adoptivo y el juguete sexual de Papa Dino Golzine, Ash, ahora a la edad rebelde de diecisiete años, abandona el reino sostenido por el diablo que lo crió.",
         "estudio": "MAPPA",
@@ -107,7 +107,7 @@
     {
         "anime_id": 25,
         "titulo": "Steins;Gate 0",
-        "link": "/Anime/2018/Primavera/Steins;Gate-0",
+        "link": "/Anime/Steins-Gate-0",
         "imgurl": "https://cdn.myanimelist.net/images/anime/1768/93520l.jpg",
         "descripcion": "La oscura historia no contada de Steins;Gate muestra al excéntrico científico loco Okabe, que lucha por recuperarse de un intento fallido de rescatar a Kurisu. Decide darse por vencido y abandona a su animado álter ego científico, en la búsqueda de olvidar el pasado. Cuando todo parece ser normal, aparentemente recuerda el pasado al conocer a un conocido de Kurisu... ",
         "estudio": "White Fox",
@@ -122,7 +122,7 @@
     {
         "anime_id": 24,
         "titulo": "Mahou Shoujo Site",
-        "link": "/Anime/2018/Primavera/Mahou-Shoujo-Site",
+        "link": "/Anime/Mahou-Shoujo-Site",
         "imgurl": "https://cdn.myanimelist.net/images/anime/1720/95064l.jpg",
         "descripcion": "Aya Asagiri es una chica de secundaria que tiene problemas tanto en la escuela con el acoso escolar como en el hogar debido al abuso físico de su hermano. Al navegar en línea, aparece un sitio web en su computadora con una persona de aspecto espeluznante. Esta persona parece tener piedad de ella, y anuncia que le ha otorgado poderes mágicos a Asagiri. ",
         "estudio": "production doA",
@@ -137,7 +137,7 @@
     {
         "anime_id": 23,
         "titulo": "Wotaku ni Koi wa Muzukashii",
-        "link": "/Anime/2018/Primavera/WotaKoi",
+        "link": "/Anime/WotaKoi",
         "imgurl": "https://cdn.myanimelist.net/images/anime/1864/93518l.jpg",
         "descripcion": "Después de descubrir que trabajan en la misma compañía, un otaku enloquecido y un fujoshi se reúnen por primera vez desde la secundaria. Después de algunas sesiones de bebida después del trabajo comienzan a salir, pero ¿será una relación perfecta para los dos? ",
         "estudio": "A-1 Pictures",
@@ -152,7 +152,7 @@
     {
         "anime_id": 22,
         "titulo": "Shokugeki no Soma: San no Sara - Toutsuki Ressha-hen",
-        "link": "/Anime/2018/Primavera/Shokugeki-no-Soma-3-2",
+        "link": "/Anime/Shokugeki-no-Soma-3-2",
         "imgurl": "https://cdn.myanimelist.net/images/anime/1604/93531l.jpg",
         "descripcion": "El segundo platillo de Shokugeki no Soma: San no Sara",
         "estudio": "J.C. Staff",
@@ -167,7 +167,7 @@
     {
         "anime_id": 21,
         "titulo": "Violet Evergarden",
-        "link": "/Anime/2018/Invierno/Violet-Evergarden",
+        "link": "/Anime/Violet-Evergarden",
         "imgurl": "https://cdn.myanimelist.net/images/anime/1795/95088l.jpg",
         "descripcion": "Hay palabras que Violet escuchó en el campo de batalla, las cuales no puede olvidar. Esas palabras le fueron dadas por alguien que conocía, más que nadie. Ella aún no conoce su significado. ",
         "estudio": "Kyoto Animation",
@@ -182,7 +182,7 @@
     {
         "anime_id": 20,
         "titulo": "Inuyashiki",
-        "link": "/Anime/2017/Otono/Inuyashiki",
+        "link": "/Anime/Inuyashiki",
         "imgurl": "https://cdn.myanimelist.net/images/anime/3/88470l.jpg",
         "descripcion": "Inuyashiki Ichirou está de mala suerte. Justo cuando parece que las cosas no pueden empeorar, una luz cegadora en el cielo nocturno golpea la tierra donde se encuentra Ichirou. ",
         "estudio": "MAPPA",
@@ -197,7 +197,7 @@
     {
         "anime_id": 19,
         "titulo": "Kekkai Sensen and Beyond",
-        "link": "/Anime/2017/Otono/Kekkai-Sensen-Beyond",
+        "link": "/Anime/Kekkai-Sensen-Beyond",
         "imgurl": "https://cdn.myanimelist.net/images/anime/9/88281l.jpg",
         "descripcion": "Segunda temporada de Kekkai Sensen.",
         "estudio": "Bones",
@@ -212,7 +212,7 @@
     {
         "anime_id": 18,
         "titulo": "Just Because!",
-        "link": "/Anime/2017/Otono/Just-Because",
+        "link": "/Anime/Just-Because",
         "imgurl": "https://cdn.myanimelist.net/images/anime/3/88185l.jpg",
         "descripcion": "Al final del segundo semestre del tercer año de preparatoria, cuatro estudiantes están listos para graduarse y pueden sentir el final de su vida en la preparatoria. Pero eso cambia un poco con la llegada de un estudiante transferido. ",
         "estudio": "Pine Jam",
@@ -227,7 +227,7 @@
     {
         "anime_id": 17,
         "titulo": "Shokugeki no Soma: San no Sara",
-        "link": "/Anime/2017/Otono/Shokugeki-no-Soma-3",
+        "link": "/Anime/Shokugeki-no-Soma-3",
         "imgurl": "https://cdn.myanimelist.net/images/anime/4/86603l.jpg",
         "descripcion": "Tercera temporada de Shokugeki no Soma",
         "estudio": "J.C. Staff",
@@ -242,7 +242,7 @@
     {
         "anime_id": 16,
         "titulo": "Kakegurui",
-        "link": "/Anime/2017/Verano/Kakegurui",
+        "link": "/Anime/Kakegurui",
         "imgurl": "https://cdn.myanimelist.net/images/anime/3/86578l.jpg",
         "descripcion": "Academia Privada Hyakkaou. Una institución para los privilegiados con un currículo muy peculiar. Veras, cuando eres de los hijos e hijas de los más ricos de los ricos, no es la destreza atlética o la inteligencia lo que te mantiene por delante. Es leer a tu oponente, el arte del trato. ¿Qué mejor manera de afilar esas habilidades que con un riguroso plan de estudios de juegos de azar? ",
         "estudio": "MAPPA",
@@ -257,7 +257,7 @@
     {
         "anime_id": 15,
         "titulo": "Re:Creators",
-        "link": "/Anime/2017/Verano/Re:Creators",
+        "link": "/Anime/Re:Creators",
         "imgurl": "https://cdn.myanimelist.net/images/anime/11/85469l.jpg",
         "descripcion": "Los humanos han creado muchas historias. Felicidad, tristeza, ira, emociones profundas. Las historias sacuden nuestro corazón y nos fascinan. Sin embargo, estos son sólo los pensamientos de los espectadores. Pero ¿y si los personajes de la historia tienen intenciones?",
         "estudio": "TROYCA",
@@ -272,7 +272,7 @@
     {
         "anime_id": 14,
         "titulo": "Flip Flappers",
-        "link": "/Anime/2016/Otono/Flip-Flappers",
+        "link": "/Anime/Flip-Flappers",
         "imgurl": "https://cdn.myanimelist.net/images/anime/4/82292l.jpg",
         "descripcion": "Cocona, que lleva una vida normal, se encuentra un día con Papika, y juntas van a Pure Illusion, a conseguir fragmentos, que se dice pueden conceder deseos.",
         "estudio": "Studio 3Hz",

@@ -15,7 +15,7 @@
         name: "variante"
         props:
             indice:
-                type: String
+                type: Number
                 required: true
             opcion:
                 type: Object
