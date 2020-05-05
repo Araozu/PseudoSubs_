@@ -21,7 +21,7 @@
         mounted: ->
             store = @$store
             resTxt =  await fetch "#{this.$store.state.servidor}/data/animes.json"
-            resultado = await resTxt.json();
+            resultado = await resTxt.json()
             store.commit "establecerAnime", resultado
 
 
