@@ -5,7 +5,7 @@
         div.otro(:style="'min-height: ' + altoPantalla + 'px' ")
             div.col
                 div.fil
-                    div.titulo PseudoSubs ain't fansub
+                    div.titulo PseudoSubs ain't a fansub
                     div.motto Nuevos eps cuando me de la gana.
                     br
                     br
