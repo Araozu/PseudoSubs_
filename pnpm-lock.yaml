@@ -9,7 +9,7 @@ dependencies:
     specifier: 5.0.8
     version: 5.0.8(@babel/core@7.23.2)(vue@2.7.15)
   babel-loader:
-    specifier: ^8.1.0
+    specifier: ^8.3.0
     version: 8.3.0(@babel/core@7.23.2)(webpack@4.47.0)
   cache-loader:
     specifier: ^4.1.0
@@ -21,55 +21,55 @@ dependencies:
     specifier: ^1.6.0
     version: 1.6.0
   css-loader:
-    specifier: ^3.5.3
+    specifier: ^3.6.0
     version: 3.6.0(webpack@4.47.0)
   file-loader:
-    specifier: ^6.0.0
+    specifier: ^6.2.0
     version: 6.2.0(webpack@4.47.0)
   postcss-loader:
     specifier: ^3.0.0
     version: 3.0.0
   register-service-worker:
-    specifier: ^1.6.2
+    specifier: ^1.7.2
     version: 1.7.2
   sass:
-    specifier: ^1.69.4
+    specifier: ^1.69.5
     version: 1.69.5
   thread-loader:
     specifier: ^2.1.3
     version: 2.1.3(webpack@4.47.0)
   url-loader:
-    specifier: ^4.1.0
+    specifier: ^4.1.1
     version: 4.1.1(file-loader@6.2.0)(webpack@4.47.0)
   vue:
-    specifier: ^2.6.6
+    specifier: ^2.7.15
     version: 2.7.15
   vue-analytics:
-    specifier: ^5.16.4
+    specifier: ^5.22.1
     version: 5.22.1
   vue-disqus:
     specifier: ^3.0.5
     version: 3.0.5
   vue-google-signin-button:
-    specifier: ^1.0.2
+    specifier: ^1.0.4
     version: 1.0.4
   vue-loader:
-    specifier: ^15.9.2
+    specifier: ^15.11.1
     version: 15.11.1(cache-loader@4.1.0)(css-loader@3.6.0)(pug@2.0.4)(vue-template-compiler@2.7.15)(webpack@4.47.0)
   vue-router:
-    specifier: ^3.0.1
+    specifier: ^3.6.5
     version: 3.6.5(vue@2.7.15)
   vue-style-loader:
-    specifier: ^4.1.2
+    specifier: ^4.1.3
     version: 4.1.3
   vuex:
-    specifier: ^3.0.1
+    specifier: ^3.6.2
     version: 3.6.2(vue@2.7.15)
   web-push:
-    specifier: ^3.3.3
+    specifier: ^3.6.6
     version: 3.6.6
   yaml:
-    specifier: ^1.4.0
+    specifier: ^1.10.2
     version: 1.10.2
 
 devDependencies:
@@ -77,37 +77,37 @@ devDependencies:
     specifier: 5.0.8
     version: 5.0.8(@vue/cli-service@3.12.1)(vue@2.7.15)
   '@vue/cli-plugin-pwa':
-    specifier: ^3.0.5
+    specifier: ^3.12.1
     version: 3.12.1
   '@vue/cli-service':
-    specifier: ^3.0.5
+    specifier: ^3.12.1
     version: 3.12.1(pug@2.0.4)(vue-template-compiler@2.7.15)
   coffee-loader:
     specifier: ^0.9.0
     version: 0.9.0(coffeescript@2.7.0)
   coffeescript:
-    specifier: ^2.3.2
+    specifier: ^2.7.0
     version: 2.7.0
   node-sass:
     specifier: 9.0.0
     version: 9.0.0
   pug:
-    specifier: ^2.0.3
+    specifier: ^2.0.4
     version: 2.0.4
   pug-plain-loader:
-    specifier: ^1.0.0
+    specifier: ^1.1.0
     version: 1.1.0(pug@2.0.4)
   sass-loader:
-    specifier: ^7.1.0
+    specifier: ^7.3.1
     version: 7.3.1(webpack@4.47.0)
   typescript:
-    specifier: ^3.7.3
+    specifier: ^3.9.10
     version: 3.9.10
   vue-cli-plugin-express:
-    specifier: ^1.0.0
+    specifier: ^1.0.2
     version: 1.0.2(@vue/cli-service@3.12.1)(@vue/cli-shared-utils@3.12.1)
   vue-template-compiler:
-    specifier: ^2.5.21
+    specifier: ^2.7.15
     version: 2.7.15
 
 packages:
