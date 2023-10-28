@@ -1,5 +1,20 @@
 [
     {
+        "anime_id": 33,
+        "titulo": "Kaguya-sama wa Kokurasetai: First Kiss wa Owaranai",
+        "link": "/Anime/Kaguya-sama-4",
+        "imgurl": "https://cdn.myanimelist.net/images/anime/1670/130060l.jpg",
+        "descripcion": "Cuarta temporada de Kaguya-sama wa Kokurasetai.",
+        "estudio": "A1-Pictures",
+        "eps": 4,
+        "alaire": "17 de Diciembre de 2022",
+        "temporada": "Primavera",
+        "anio": "2022",
+        "fuente": "Manga",
+        "generos": "Comedia, Drama, Psicologico, Romance, Escolar, Seinen",
+        "color": "#9e0034"
+    },
+    {
         "anime_id": 32,
         "titulo": "Kaguya-sama wa Kokurasetai? S2",
         "link": "/Anime/Kaguya-sama-2",

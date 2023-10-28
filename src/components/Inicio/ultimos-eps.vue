@@ -83,12 +83,12 @@
                         @obtenerAntAnime()
                 @cuentaAtrasCambio = setTimeout (() ->
                     _.establecerIntervalo()
-                ), 5000
+                ), 7500
             establecerIntervalo: ->
                 _ = this
                 @intervalo = setInterval (() ->
                     _.anime = _.obtenerSigAnime()
-                ), 5000
+                ), 7500
         beforeDestroy: ->
             clearInterval @intervalo
 
@@ -128,10 +128,10 @@
         z-index: 3
 
     .fondo_texto--claro
-        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.8) 40%, $fondo2--claro 70%)
+        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.8) 60%, $fondo2--claro 90%)
 
     .fondo_texto--oscuro
-        background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.8) 40%, $fondo2--oscuro 70%)
+        background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.8) 60%, $fondo2--oscuro 100%)
 
     .animeCont
         max-height: 500px

@@ -1,26 +1,19 @@
-# pseudosubs5
+# pseudosubs-v2
 
 ## Project setup
 ```
-yarn install
+pnpm install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn run serve
+pnpm run serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn run build
+pnpm run build
 ```
 
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
