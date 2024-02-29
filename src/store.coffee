@@ -15,6 +15,7 @@ almacenarEnLocalStorage = (clave, valor, fnActualizar) =>
 export default new Vuex.Store
     state:
         servidor: ""
+        servidor2: "http://localhost:3485"
 
         animes:
             if localStorage?

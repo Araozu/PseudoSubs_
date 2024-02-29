@@ -58,7 +58,6 @@
             vm = this
             animes = @$store.state.animes
             resultado = -1
-            console.log animes
             for anime in animes
                 console.log "Param is #{@$route.params.nombre}"
                 if anime.link is "/Anime/" + @$route.params.nombre

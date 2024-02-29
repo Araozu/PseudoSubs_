@@ -102,7 +102,6 @@
                         vm.mostrarSpinnerParaCargaDeEps = false
                         vm.datos = opciones.map (opcion) =>
                             episodios = eps.filter (ep) => ep.opcion_id == opcion.opcion_id
-                            console.log episodios
                             { eps: episodios, opcion... }
 
                         vm.datosCorrectos = true

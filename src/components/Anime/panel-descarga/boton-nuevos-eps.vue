@@ -45,7 +45,7 @@
                     escala = if escala is 1 then 0.3 else 1
                 ), 500
 
-                ruta = if @suscrito then "/n/desubscribir/" else "/n/subscribir/"
+                ruta = @$store.state.servidor + if @suscrito then "/n/desubscribir/" else "/n/subscribir/"
 
                 res = await fetch ruta,
                     method: "POST"

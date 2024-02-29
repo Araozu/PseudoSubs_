@@ -52,35 +52,29 @@
                 "https://www.youtube.com/results?search_query=" + (encodeURIComponent "#{nombre} - #{artista}")
         mounted: ->
             vm = this
-            fetch "#{this.$store.state.servidor}/op/#{this.anime_ID}",
-                method: "POST"
-                headers:
-                    "Content-Type": "application/x-www-form-urlencoded"
-            .then (res) ->
-                data = YAML.parse(await res.text())
-                vm.estadoOp =
-                    if data.exito
-                        vm.ops = data.payload
-                        1
-                    else
-                        console.error data.error
-                        -1
-            .catch (err) -> console.log "Error :c #{err}"
+            fetch "#{this.$store.state.servidor2}/op/#{this.anime_ID}"
+                .then (res) ->
+                    data = YAML.parse(await res.text())
+                    vm.estadoOp =
+                        if res.status == 200
+                            vm.ops = data
+                            1
+                        else
+                            console.error "Error recuperando OPs", data
+                            -1
+                .catch (err) -> console.log "Error :c #{err}"
 
-            fetch "#{this.$store.state.servidor}/ed/#{this.anime_ID}",
-                method: "POST"
-                headers:
-                    "Content-Type": "application/x-www-form-urlencoded"
-            .then (res) ->
-                data = YAML.parse(await res.text())
-                vm.estadoEd =
-                    if data.exito
-                        vm.eds = data.payload
-                        1
-                    else
-                        console.error data.error
-                        -1
-            .catch (err) -> console.log "Error :c #{err}"
+            fetch "#{this.$store.state.servidor2}/ed/#{this.anime_ID}"
+                .then (res) ->
+                    data = YAML.parse(await res.text())
+                    vm.estadoEd =
+                        if res.status == 200
+                            vm.eds = data
+                            1
+                        else
+                            console.error "Error recuperando EDs", data
+                            -1
+                .catch (err) -> console.log "Error :c #{err}"
     #
 
 </script>
